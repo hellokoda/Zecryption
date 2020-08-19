@@ -1,4 +1,4 @@
-<?
+<?php
 /*
 
 Powered Best License
@@ -42,7 +42,7 @@ function zEcryptString($string , $spice) {
     }
     // String was set and the above was skipped.
     // Check is spice set in the called function
-    if (!isset($spice)) {
+    if ($spice != null) {
         #######################################
         ####                               ####
         ####           RECOMMENDED         ####
@@ -67,12 +67,9 @@ function zEcryptString($string , $spice) {
         );
     }
     // The partone variable has been set, now going forward.
-    // We are now encoding that corrupted text on base64
-    // Instead of going back into its original state
-    // It will give you a random garbled alphanumeral string
-    // That is based on the given string only 
+    // We are now shifting that broken text into a hexidecimal.
     // One string will always generate the same results
-    $parttwo = base64_encode(
+    $parttwo = bin2hex(
         $partone
     );
     // parttwo set and finished, next up, MD5.
