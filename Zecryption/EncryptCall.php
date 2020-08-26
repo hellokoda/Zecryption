@@ -34,15 +34,15 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 */
 
-function zEcryptString($string , $spice) {
+function zEcryptString($imkoda_RfUjWnZr , $imkoda_UjXn2r5u) {
     // Check is string is set in the called function.
-    if (!isset($string)) {
+    if (!isset($imkoda_RfUjWnZr)) {
         // String was not set, sending a fatal error as a return, and canceling the call.
-        return "FATAL: Missing first syntax in function call! zEcryptString(\$string << missing";
+        return "FATAL: Missing first syntax in function call! zEcryptString(string << missing";
     }
     // String was set and the above was skipped.
     // Check is spice set in the called function
-    if ($spice != null) {
+    if ($imkoda_UjXn2r5u != null) {
         #######################################
         ####                               ####
         ####           RECOMMENDED         ####
@@ -54,33 +54,35 @@ function zEcryptString($string , $spice) {
         // make the data hard to decrypt.
         // Just breaks down the plain text (with spice) into corrupted data
         // Since it is not encoded in the first place.
-        $partone = base64_decode(
-            $string . $spice
+        $imkoda_hVmYq3t6 = base64_decode(
+            $imkoda_RfUjWnZr . $imkoda_UjXn2r5u
         );
     }
     else {
         // Get string and set it to garbled data (decoding error)
         // Just breaks down the plain text into corrupted data
         // Since it is not encoded in the first place.
-        $partone = base64_decode(
-            $string
+        $imkoda_hVmYq3t6 = base64_decode(
+            $imkoda_RfUjWnZr
         );
     }
-    // The partone variable has been set, now going forward.
+    // The imkoda_hVmYq3t6 variable has been set, now going forward.
     // We are now shifting that broken text into a hexidecimal.
     // One string will always generate the same results
-    $parttwo = bin2hex(
-        $partone
+    $imkoda_KbPeSgVk = bin2hex(
+        $imkoda_hVmYq3t6
     );
-    // parttwo set and finished, next up, MD5.
+    // imkoda_KbPeSgVk set and finished, next up, MD5.
     // This text is already completely ruined and can not 
     // be translated into its original state, but as my pet
     // rock says, "there is never enough."
-    $partthree = md5($parttwo);
+    $imkoda_4u7x1APD = md5($imkoda_KbPeSgVk);
     // Now on to the last part of the encryption, sha256
     // I love sha256 <3
-    $encrypted_string = hash('sha256', $partthree);
+    for ($imkoda_cQeThWmZ = 0; $imkoda_cQeThWmZ <= 20; $imkoda_cQeThWmZ+=1) {
+        $imkoda_4u7x1APD = hash('sha256', $imkoda_4u7x1APD);
+    }
     // And now, off you go encrypted string!
     // Be free my little butterfly.
-    return $encrypted_string;
+    return $imkoda_4u7x1APD;
 }
