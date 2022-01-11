@@ -1,5 +1,7 @@
 # Zashing
 A string hashing method that becomes completely irreversible, no one, not even your grandpa that fought in World War II can get the string back to its original shape.
+<br>
+<b>Before you make fun of me, I made this library when I had no idea what the difference between encryption and hashing, I do now because I dove deeper into cybersecurity. <3 </b>
 
 # Installation
 Send a Git request to `https://github.com/kodaLee/Zecryption.git`
